@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('Musix')
+        .module('Viddy')
         .controller('AdminController', AdminController);
 
     function AdminController(UserService, PostService) {

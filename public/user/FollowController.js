@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('Musix')
+        .module('Viddy')
         .controller('FollowController', FollowController);
 
     function FollowController($routeParams, $rootScope, UserService) {

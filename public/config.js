@@ -1,7 +1,7 @@
 'use strict';
 (function () {
     angular
-        .module('Musix')
+        .module('Viddy')
         .config(Config);
     function Config($routeProvider) {
 

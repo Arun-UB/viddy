@@ -1,7 +1,7 @@
 (function () {
     'use strict';
     angular
-        .module('Musix')
+        .module('Viddy')
         .factory('CommentService', CommentService);
 
     function CommentService($http) {

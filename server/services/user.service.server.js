@@ -16,7 +16,7 @@ module.exports = function (app, models) {
     app.post('/project/api/user', createUser);
     app.post('/project/api/register', register);
     app.get('/project/api/auth/google', passport.authenticate('google', {scope: ['profile', 'email']}));
-    app.post('/project/api/login', passport.authenticate('musix'), login);
+    app.post('/project/api/login', passport.authenticate('Viddy'), login);
     app.get('/project/api/auth/google/oauth2callback',
         passport.authenticate('google', {
             successRedirect: '/project/#/',
@@ -36,7 +36,7 @@ module.exports = function (app, models) {
     app.put('/project/api/user/:userId/updateFollowers', updateFollowers);
     app.delete('/project/api/user/:userId', deleteUser);
 
-    passport.use('musix', new LocalStrategy(localStrategy));
+    passport.use('Viddy', new LocalStrategy(localStrategy));
     passport.use(new GoogleStrategy(googleConfig, googleStrategy));
     passport.serializeUser(serializeUser);
     passport.deserializeUser(deserializeUser);

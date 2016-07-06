@@ -1,7 +1,7 @@
 (function () {
         'use strict';
         angular
-            .module('Musix')
+            .module('Viddy')
             .controller('ProfileController', ProfileController);
 
     function ProfileController($location, $routeParams, $rootScope, $sce, $window, UserService, PostService, CommentService) {

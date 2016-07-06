@@ -1,7 +1,7 @@
 (function () {
     'use strict';
     angular
-        .module('Musix')
+        .module('Viddy')
         .controller('EditPostController', EditPostController);
 
     function EditPostController($routeParams, $rootScope, $location, $window, PostService) {

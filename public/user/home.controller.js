@@ -1,6 +1,6 @@
 (function () {
     angular
-        .module('Musix')
+        .module('Viddy')
         .controller('HomeController', HomeController);
 
     function HomeController($rootScope, $sce, PostService, CommentService, $filter, $window, youtubeEmbedUtils) {

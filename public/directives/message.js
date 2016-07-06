@@ -1,7 +1,7 @@
 (function () {
     'use strict';
     angular
-        .module('Musix')
+        .module('Viddy')
         .directive('msg', msg);
 
     function msg() {

@@ -1,7 +1,7 @@
 module.exports = function () {
     'use strict';
     var mongoose = require('mongoose');
-    var connectionString = 'mongodb://admin:GW8XWk6vbhEZ@localhost/webdev';
+    var connectionString = 'mongodb://localhost/viddy';
     if (process.env.OPENSHIFT_MONGODB_DB_PASSWORD) {
         connectionString = process.env.OPENSHIFT_MONGODB_DB_USERNAME + ':' +
             process.env.OPENSHIFT_MONGODB_DB_PASSWORD + '@' +
@@ -15,7 +15,6 @@ module.exports = function () {
         userModel: require('./user/user.model')(),
         postModel: require('./post/post.model')(),
         commentModel: require('./comment/comment.model')(),
-        // widgetModel: require('./widget/widget.model.server')()
     };
     return models;
 };

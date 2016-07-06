@@ -1,7 +1,7 @@
 (function () {
     'use strict';
     angular
-        .module('Musix')
+        .module('Viddy')
         .filter('parseUrl', parseUrl)
         .filter('replaceUrl', replaceUrl);
     function parseUrl($sce) {

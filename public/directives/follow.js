@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('Musix')
+        .module('Viddy')
         .directive('follow', navbar);
 
     function navbar() {

@@ -1,7 +1,7 @@
 (function () {
     'use strict';
     angular
-        .module('Musix')
+        .module('Viddy')
         .controller('SearchController', SearchController);
 
     function SearchController($rootScope, $sce, $window, $location, SearchService) {

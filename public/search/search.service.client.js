@@ -1,7 +1,7 @@
 (function () {
     'use strict';
     angular
-        .module('Musix')
+        .module('Viddy')
         .factory('SearchService', SearchService);
 
     function SearchService($http, youtubeFactory) {
@@ -19,7 +19,7 @@
                 q: query,
                 order: 'viewCount',
                 relevanceLanguage: 'EN',
-                key: 'AIzaSyBprK26aXwQj9eOrbDvoYsxi41hQfV4bSw'
+                key: 'Youtube API key'
             });
         }
 
