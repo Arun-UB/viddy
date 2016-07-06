@@ -1,0 +1,42 @@
+<navbar user="currentUser"></navbar>
+<div class="container">
+    <div class="btn-group " data-toggle="buttons">
+
+        <input type="radio" ng-model="model.current" value="User" ng-change="model.loadData()">Users
+        <input type="radio" ng-model="model.current" value="Post" ng-change="model.loadData()">Posts
+
+    </div>
+    <a href="#/addUser" class="btn btn-default pull-right" ng-show="model.current==='User'">Add User</a>
+
+    <table class="table table-responsive user-table" ng-show="model.current==='User'">
+
+        <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
+        </tr>
+        </thead>
+        <tbody ng-repeat="user in model.users">
+        <tr>
+            <td>{{user.firstName}}</td>
+            <td>{{user.lastName}}</td>
+            <td><a href="#/profile/{{user._id}}/edit">{{user.username}}</a></td>
+        </tbody>
+    </table>
+    <table class="table table-responsive" ng-show="model.current==='Post'">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Test</th>
+            <th>Username</th>
+        </tr>
+        </thead>
+        <tbody ng-repeat="post in model.posts">
+        <tr>
+            <td><a href="#/post/{{post._id}}">{{post._id}}</a></td>
+            <td>{{post.text}}</td>
+            <td>{{post._user.username}}</td>
+        </tbody>
+    </table>
+</div>

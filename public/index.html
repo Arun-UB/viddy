@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Musix">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#4285f4">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#4285f4">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Viddy</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/paper/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- inject:css -->
+    <link rel="stylesheet" href="css/card.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- endinject -->
+
+
+</head>
+<body>
+<div ng-view>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-sanitize.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+        crossorigin="anonymous"></script>
+
+<script src="/bower_components/PACE/pace.min.js"></script>
+<script src="https://www.youtube.com/iframe_api"></script>
+<script src="/bower_components/angular-youtube-mb/src/angular-youtube-embed.js"></script>
+<script src="/bower_components/moment/moment.js"></script>
+<script src="/bower_components/underscore/underscore-min.js"></script>
+<script src="/bower_components/angular-youtube-api-factory/dist/angular-youtube-api-factory.min.js"></script>
+<!-- inject:js -->
+<script src="app.js"></script>
+<script src="config.js"></script>
+<script src="comment/comment.service.client.js"></script>
+<script src="directives/back.js"></script>
+<script src="directives/follow.js"></script>
+<script src="directives/message.js"></script>
+<script src="directives/navbar.js"></script>
+<script src="directives/profile.card.js"></script>
+<script src="directives/profile.js"></script>
+<script src="filters/parseUrl.js"></script>
+<script src="search/search.controller.js"></script>
+<script src="search/search.service.client.js"></script>
+<script src="user/add.user.controller.js"></script>
+<script src="user/admin.controller.js"></script>
+<script src="user/edit.profile.controller.js"></script>
+<script src="user/FollowController.js"></script>
+<script src="user/FollowingController.js"></script>
+<script src="user/home.controller.js"></script>
+<script src="user/login.controller.js"></script>
+<script src="user/post.edit.controller.js"></script>
+<script src="user/post.service.client.js"></script>
+<script src="user/profile.controller.js"></script>
+<script src="user/register.controller.js"></script>
+<script src="user/user.service.client.js"></script>
+<!--endinject-->
+</body>
+</html>
+

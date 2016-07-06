@@ -1,0 +1,35 @@
+{
+  "name": "viddy",
+  "version": "1.0.0",
+  "description": "Viddy",
+  "main": "server.js",
+  "dependencies": {
+    "atob": "^2.0.3",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.15.1",
+    "bower": "^1.7.9",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.13.4",
+    "express-session": "^1.13.0",
+    "find-hashtags": "^1.0.0",
+    "gulp": "^3.9.1",
+    "mongoose": "^4.4.15",
+    "mongoose-deep-populate": "^3.0.0",
+    "multer": "^1.1.0",
+    "passport": "^0.3.2",
+    "passport-facebook": "^2.1.1",
+    "passport-google-oauth": "^1.0.0",
+    "passport-local": "^1.0.0",
+    "shortid": "^2.2.6"
+  },
+  "devDependencies": {
+    "gulp-inject": "^4.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "if [ -d \"$OPENSHIFT_REPO_DIR\" ]; then (export HOME=\"$OPENSHIFT_REPO_DIR\"/..; bower install) else (bower install) fi",
+    "start": "node server.js"
+  },
+  "author": "Arun Bharadwaj",
+  "license": "ISC"
+}

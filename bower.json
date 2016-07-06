@@ -1,0 +1,18 @@
+{
+  "name": "viddy",
+  "description": "Viddy",
+  "main": "server.js",
+  "authors": [
+    "Arun Bharadwaj"
+  ],
+  "license": "ISC",
+  "homepage": "n",
+  "private": true,
+  "dependencies": {
+    "PACE": "pace#^1.0.2",
+    "angular-youtube-mb": "^1.2.0",
+    "moment": "^2.13.0",
+    "underscore": "^1.8.3",
+    "angular-youtube-api-factory": "^0.6.0"
+  }
+}

@@ -1,0 +1,44 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a href="#/profile/{{currentUser._id}}"> <i class="material-icons pull-left top-left">arrow_back</i></a>
+            <a class="navbar-brand" href="">&nbsp;Profile</a>
+            <a href="" ng-show="currentUser.admin" ng-click="model.deleteUser(model.user._id)"><i
+                    class="material-icons profile top-right">delete</i></span>
+            </a></div>
+    </div>
+</nav>
+<div class="container">
+    <msg data="model.msg"></msg>
+
+    <form class="sign-in">
+
+        <div class="form-group" ng-class="{ 'has-error' : model.msg.type === 'error'}">
+            <label for="username">Username</label>
+            <input type="text" ng-model="model.user.username" class="form-control" id="username" placeholder="Username"
+                   autofocus required>
+            <div ng-show="model.msg.type === 'error'">
+                <div class="help-block">Please enter the username</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" ng-model="model.user.email" class="form-control" id="email"
+                   placeholder="email" required>
+        </div>
+        <div class="form-group">
+            <label for="firstname">First Name</label>
+            <input type="firstname" ng-model="model.user.firstName" class="form-control" id="firstname"
+                   placeholder="First Name" required>
+        </div>
+        <div class="form-group">
+            <label for="lastname">Last Name</label>
+            <input type="lastname" ng-model="model.user.lastName" class="form-control" id="lastname"
+                   placeholder="Last Name"
+                   required>
+        </div>
+
+        <a href="" ng-click="model.updateUser()" class="btn btn-success btn-block">Save</a>
+    </form>
+</div> <!-- /container -->
+

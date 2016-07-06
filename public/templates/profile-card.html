@@ -1,0 +1,24 @@
+<div class="profile-head center-block">
+    <img src="./images/profile.svg" class="profile-img">
+    <div ng-if="user.pFlag" class="dropdown pull-right profile-options">
+        <i class="dropdown-toggle material-icons" id="profile-options-dropdown" data-toggle="dropdown"
+           aria-haspopup="true" aria-expanded="true">more_vert</i>
+        <ul class="dropdown-menu" aria-labelledby="profile-options-dropdown">
+            <li><a href="#/profile/{{user._id}}/edit">Edit Profile</a></li>
+            <li><a href="" ng-click="logout()">Logout</a></li>
+        </ul>
+    </div>
+    <div ng-if="!user.pFlag" class="profile-follow pull-right">
+        <button ng-hide="following()" ng-click="follow()" class="btn btn-success">Follow</button>
+        <button ng-show="following()" ng-click="follow()" class="btn btn-default">Following</button>
+    </div>
+    <div class="profile-text">
+
+        <div class="profile-name">
+            <span class="text-primary">{{user.username}}</span>
+            <p>{{user.firstName}} {{user.lastName}}</p></div>
+        <span class="profile-title">{{user.posts.length}} Posts
+            &nbsp; <a href="#/profile/{{user._id}}/followers">{{user.followers.length}} Followers</a> &nbsp; <a
+                    href="#/profile/{{user._id}}/following">{{user.following.length}} Following</a></span>
+    </div>
+</div>

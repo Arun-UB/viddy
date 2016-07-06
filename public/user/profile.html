@@ -1,0 +1,64 @@
+<navbar user="currentUser"></navbar>
+<div class="container">
+    <profile-card user="model.user" follow="model.follow()" following="model.following()"
+                  logout="model.logout()" pFlag="model.pFlag"></profile-card>
+    <div class="feed">
+        <div ng-repeat="post in model.posts | orderBy:'-dateCreated'" class="post">
+            <div class="card">
+                <div class="card-header">
+                    <img src="./images/profile.svg" class="comment-img">
+                    &nbsp;<a href="#/profile/{{post._user._id}}">
+                    <strong>{{post._user.username}}</strong></a>
+                    <div ng-show="currentUser._id === post._user._id" class="dropdown pull-right post-options">
+                        <i class="dropdown-toggle material-icons" id="post-options-dropdown" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="true">more_vert</i>
+                        <ul class="dropdown-menu" aria-labelledby="post-options-dropdown">
+                            <li><a href="" ng-click="model.deletePost(post._id)">Delete</a></li>
+                        </ul>
+                    </div>
+                    <div class="pull-right post-time">
+                        {{model.getDate(post.dateCreated)}}
+                    </div>
+
+                    </div>
+                <div class="card-block">
+                    <p class="card-text">{{post.text}}</p>
+                    <div class="card-text">
+                        <div class="youtubeWidget">
+                            <iframe width="560" height="315" ng-src="{{model.getSafeUrl(post.link)}}"
+                                    frameborder="0" allowfullscreen></iframe>
+
+                        </div>
+                        <i ng-click="model.like(post)"
+                           class="material-icons "
+                           ng-class="{true:'post-fav-true',false:'post-fav'}[model.liked(post)]">favorite</i>
+                        <div class="post-comments">
+                            <span class="text-muted">{{post.comments.length}} comments</span>
+                            <ul class="comment-list">
+                                <li ng-repeat="comment in post.comments">
+                                    <span class="comment-user">{{comment._user.username}}</span>{{comment.text}}
+                                </li>
+                            </ul>
+
+                        </div>
+                        </div>
+                    <div class="clearfix"></div>
+
+                </div>
+                <div class="card-footer text-muted">
+                    <div class="row comment-input input-group">
+                        <input type="text" ng-model="model.comment.text"
+                               class="form-control col-md-12" placeholder="Comment">
+                        <span class="input-group-btn">
+                            <button ng-click="model.createComment(post)" class="btn btn-default comment-post"
+                                    type="button">
+                                <i class="material-icons">send</i></button>
+                          </span>
+                        </div>
+
+                </div>
+                </div>
+            </div>
+        </div>
+
+</div>
