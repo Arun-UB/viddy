@@ -26,6 +26,19 @@
 <body>
 <div ng-view>
 </div>
+
+<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyBSfieOiCZWuv3zXSlf6THF2JRWIEatEUI",
+        authDomain: "viddy-3d0f0.firebaseapp.com",
+        databaseURL: "https://viddy-3d0f0.firebaseio.com",
+        storageBucket: "viddy-3d0f0.appspot.com",
+    };
+    firebase.initializeApp(config);
+</script>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.min.js"></script>
